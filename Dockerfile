@@ -1,4 +1,3 @@
-# Etapa 1: build
 FROM eclipse-temurin:21-jdk-jammy AS build
 WORKDIR /app
 COPY mvnw .
@@ -10,7 +9,6 @@ RUN ./mvnw dependency:go-offline -B
 COPY src src
 RUN ./mvnw clean package -DskipTests -B
 
-# Etapa 2: imagen final, liviana
 FROM eclipse-temurin:21-jre-jammy
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
