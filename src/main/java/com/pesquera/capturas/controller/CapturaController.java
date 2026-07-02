@@ -83,7 +83,7 @@ public class CapturaController {
                   "pescadorId": 3,
                   "especieId": 2,
                   "embarcacionId": 1,
-                  "kilos": 150.5,
+                  "kgTotal": 150.5,
                   "fecha": "2026-03-15"
                 }
                 """
